@@ -26,7 +26,7 @@ const Photos = () => {
     .then((json) => {
       setPhotos(json)
       setLoading(false)
-    })
+    }).catch(error => setError(error))
     // TODO: answer here
   }, [sort, submited]);
 
